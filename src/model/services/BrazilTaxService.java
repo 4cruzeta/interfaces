@@ -1,6 +1,17 @@
 package model.services;
 
-public class BrazilTaxService {
+
+/*
+ * Com essa pequena alteração o sistema não está preso às regras de
+ * taxação de um úinco país, bastando pequenas alterações para que seja
+ * feita a adaptação.
+ * 
+ * Criada a classe TaxService.
+ */
+
+// public class BrazilTaxService {
+
+public class BrazilTaxService implements TaxService {
 
 	public double tax(double amount) {
 		if (amount <= 100.0) {

@@ -8,9 +8,20 @@ public class RentalService {
 	private Double pricePerDay;
 	private Double pricePerHour;
 
-	private BrazilTaxService taxService;
+	/*
+	 * Com essas pequenas alterações o sistema não está preso às regras de 
+	 * taxação de um úinco país, bastando pequenas alterações para que seja
+	 * feita a adaptação.
+	 * 
+	 */
+	
+	// 	private BrazilTaxService taxService;
+	
+	private TaxService taxService;
 
-	public RentalService(Double pricePerDay, Double pricePerHour, BrazilTaxService taxService) {
+	// public RentalService(Double pricePerDay, Double pricePerHour, BrazilTaxService taxService) {
+	
+	public RentalService(Double pricePerDay, Double pricePerHour, TaxService taxService) {
 		this.pricePerDay = pricePerDay;
 		this.pricePerHour = pricePerHour;
 		this.taxService = taxService;
